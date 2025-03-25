@@ -1,17 +1,17 @@
-import React from "react";
-import '../styles/index.css'
-import '../styles/reset1.css'
-import '../styles/variables.css'
-import Places from "./Places"
+import React, { useMemo } from "react";
+import '../styles/index.css';
+import '../styles/reset1.css';
+import '../styles/variables.css';
+import Places from "./Places";
 
-function PlacesContainer(){
+function PlacesContainer({ sortOption }){
     const places = [
         {
             image: "../images/place.png",
             type: "Water Activities",
             title: "Westminster to Greenwich River Thames",
             duration: "2 hours",
-            cost: "$35.00",
+            cost: "$31.00",
             reviews: 584
         },
         {
@@ -19,16 +19,16 @@ function PlacesContainer(){
             type: "Water Activities",
             title: "Westminster to Greenwich River Thames",
             duration: "2 hours",
-            cost: "$35.00",
-            reviews: 584
+            cost: "$45.00",
+            reviews: 421
         },
         {
             image: "../images/place3.png",
             type: "Water Activities",
             title: "Westminster to Greenwich River Thames",
             duration: "2 hours",
-            cost: "$35.00",
-            reviews: 584
+            cost: "$28.50",
+            reviews: 318
         },
         {
             image: "../images/place4.png",
@@ -36,53 +36,75 @@ function PlacesContainer(){
             title: "Westminster to Greenwich River Thames",
             duration: "2 hours",
             cost: "$35.00",
-            reviews: 584
+            reviews: 500
         },
         {
             image: "../images/place5.png",
             type: "Water Activities",
             title: "Westminster to Greenwich River Thames",
             duration: "2 hours",
-            cost: "$35.00",
-            reviews: 584
+            cost: "$32.50",
+            reviews: 723
         },
         {
             image: "../images/place6.png",
             type: "Water Activities",
             title: "Westminster to Greenwich River Thames",
             duration: "2 hours",
-            cost: "$35.00",
-            reviews: 584
+            cost: "$19.00",
+            reviews: 60
         },
         {
             image: "../images/place7.png",
             type: "Water Activities",
             title: "Westminster to Greenwich River Thames",
             duration: "2 hours",
-            cost: "$35.00",
-            reviews: 584
+            cost: "$70.00",
+            reviews: 1042
         },
         {
             image: "../images/place8.png",
             type: "Water Activities",
             title: "Westminster to Greenwich River Thames",
             duration: "2 hours",
-            cost: "$35.00",
-            reviews: 584
+            cost: "$60.00",
+            reviews: 853
         },
         {
             image: "../images/place9.png",
             type: "Water Activities",
             title: "Westminster to Greenwich River Thames",
             duration: "2 hours",
-            cost: "$35.00",
-            reviews: 584
+            cost: "$53.00",
+            reviews: 790
         }
     ]
 
+    const sortedPlaces = useMemo(() => {
+        const placesCopy = [...places];
+        
+        switch(sortOption) {
+            case 'price-high':
+                return placesCopy.sort((a, b) => {
+                    const priceA = parseFloat(a.cost.replace('$', ''));
+                    const priceB = parseFloat(b.cost.replace('$', ''));
+                    return priceB - priceA;
+                });
+            case 'price-low':
+                return placesCopy.sort((a, b) => {
+                    const priceA = parseFloat(a.cost.replace('$', ''));
+                    const priceB = parseFloat(b.cost.replace('$', ''));
+                    return priceA - priceB;
+                });
+            case 'popularity':
+            default:
+                return placesCopy.sort((a, b) => b.reviews - a.reviews);
+        }
+    }, [sortOption, places]);
+
     return(
         <div className="places__container">
-            <Places places={places}/>
+            <Places places={sortedPlaces}/>
             <button className="places__button">Load More</button>
         </div>
     )
