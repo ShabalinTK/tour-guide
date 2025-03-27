@@ -2,46 +2,49 @@ import React from "react";
 import '../styles/index.css'
 import '../styles/reset1.css'
 import '../styles/variables.css'
+import { Link } from 'react-router-dom';
 
-function Place({ image, type, reviews, title, duration, cost }){
+function Place({ id, image, type, reviews, title, duration, cost }){
     return(
-        <li className="places__item">
-                <div className="places__item--left">
-                  <img className="places__img" src={image} alt="" />
-                  <div className="places__info">
-                    <div className="places__info--top">
-                      <a className="places__type">{type}</a>
-  
-                      <img src="/icons/line.svg" alt="" />
-                      <img src="/icons/stars.svg" alt="" />
-                      <span className="places__reviews">({reviews} reviews)</span>
-                    </div>
-                    <h2 className="places__title">
-                      {title}
-                    </h2>
-                    <div className="places__bottom">
-                      <div className="places__info-item">
-                        <img src="/icons/clock.svg" alt="" />
-                        <span className="places__info-item--text">{duration}</span>
-                      </div>
-                      <img src="/icons/line.svg" alt="" />
-                      <div className="places__info-item">
-                        <img src="/icons/transport.svg" alt="" />
-                        <span className="places__info-item--text">Transport</span>
-                      </div>
-                      <img src="/icons/line.svg" alt="" />
-                      <div className="places__info-item">
-                        <img src="/icons/family.svg" alt="" />
-                        <span className="places__info-item--text">Family Plan</span>
-                      </div>
-                    </div>
+      <Link to={`/cities/${id}`}>
+          <li className="places__item">
+            <div className="places__item--left">
+              <img className="places__img" src={image} alt="" />
+              <div className="places__info">
+                <div className="places__info--top">
+                  <a className="places__type">{type}</a>
+
+                  <img src="/icons/line.svg" alt="" />
+                  <img src="/icons/stars.svg" alt="" />
+                  <span className="places__reviews">({reviews} reviews)</span>
+                </div>
+                <h2 className="places__title">
+                  {title}
+                </h2>
+                <div className="places__bottom">
+                  <div className="places__info-item">
+                    <img src="/icons/clock.svg" alt="" />
+                    <span className="places__info-item--text">{duration}</span>
+                  </div>
+                  <img src="/icons/line.svg" alt="" />
+                  <div className="places__info-item">
+                    <img src="/icons/transport.svg" alt="" />
+                    <span className="places__info-item--text">Transport</span>
+                  </div>
+                  <img src="/icons/line.svg" alt="" />
+                  <div className="places__info-item">
+                    <img src="/icons/family.svg" alt="" />
+                    <span className="places__info-item--text">Family Plan</span>
                   </div>
                 </div>
-                <div className="places__item--right">
-                  <h3 className="places__cost">{cost}</h3>
-                  <p className="places__reviews">per person</p>
-                </div>
-              </li>
+              </div>
+            </div>
+            <div className="places__item--right">
+              <h3 className="places__cost">{cost}</h3>
+              <p className="places__reviews">per person</p>
+            </div>
+          </li>
+      </Link>
     );
 }
 

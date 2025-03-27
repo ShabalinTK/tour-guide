@@ -7,6 +7,7 @@ import Places from "./Places";
 function PlacesContainer({ sortOption }){
     const places = [
         {
+            id: 1,
             image: "../images/place.png",
             type: "Water Activities",
             title: "Westminster to Greenwich River Thames",
@@ -15,6 +16,7 @@ function PlacesContainer({ sortOption }){
             reviews: 584
         },
         {
+            id: 2,
             image: "../images/place2.png",
             type: "Water Activities",
             title: "Westminster to Greenwich River Thames",
@@ -23,6 +25,7 @@ function PlacesContainer({ sortOption }){
             reviews: 421
         },
         {
+            id: 3,
             image: "../images/place3.png",
             type: "Water Activities",
             title: "Westminster to Greenwich River Thames",
@@ -31,6 +34,7 @@ function PlacesContainer({ sortOption }){
             reviews: 318
         },
         {
+            id: 4,
             image: "../images/place4.png",
             type: "Water Activities",
             title: "Westminster to Greenwich River Thames",
@@ -39,6 +43,7 @@ function PlacesContainer({ sortOption }){
             reviews: 500
         },
         {
+            id: 5,
             image: "../images/place5.png",
             type: "Water Activities",
             title: "Westminster to Greenwich River Thames",
@@ -47,6 +52,7 @@ function PlacesContainer({ sortOption }){
             reviews: 723
         },
         {
+            id: 6,
             image: "../images/place6.png",
             type: "Water Activities",
             title: "Westminster to Greenwich River Thames",
@@ -55,6 +61,7 @@ function PlacesContainer({ sortOption }){
             reviews: 60
         },
         {
+            id: 7,
             image: "../images/place7.png",
             type: "Water Activities",
             title: "Westminster to Greenwich River Thames",
@@ -63,6 +70,7 @@ function PlacesContainer({ sortOption }){
             reviews: 1042
         },
         {
+            id: 8,
             image: "../images/place8.png",
             type: "Water Activities",
             title: "Westminster to Greenwich River Thames",
@@ -71,6 +79,7 @@ function PlacesContainer({ sortOption }){
             reviews: 853
         },
         {
+            id: 9,
             image: "../images/place9.png",
             type: "Water Activities",
             title: "Westminster to Greenwich River Thames",

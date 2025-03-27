@@ -1,8 +1,6 @@
-import Header from "../components/Header.jsx";
 import Trending from "../components/Trending.jsx";
 import Mobile from "../components/Mobile.jsx";
 import Wrapper from "../containers/Wrapper.jsx";
-import Footer from "../components/Footer.jsx";
 import Featured from "../containers/Featured.jsx";
 import PopularCities from "../containers/PopularCities.jsx";
 

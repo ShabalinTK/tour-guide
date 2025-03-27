@@ -8,6 +8,7 @@ function Places({ places }){
             places.map((place, index) => (
                 <Place
                 key={index}
+                id={place.id}
                 image={place.image}
                 type={place.type}
                 title={place.title}
