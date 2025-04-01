@@ -34,7 +34,7 @@ function PopularCities() {
             reviews: 584,
             price: "$35.00"
         }
-        ]
+    ]
     return (
         <div className="carts_tim first_tim">
         {

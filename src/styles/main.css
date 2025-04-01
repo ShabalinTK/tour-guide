@@ -5,7 +5,7 @@ body{
 h3{
     font-family: volkhov;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 22px;
     color: #1C2B38;
     width: 216px;
@@ -26,7 +26,7 @@ a{
 }
 
 .outside_tim{
-    margin-bottom: 80px;
+    /* margin-bottom: 80px; */
 }
 
 .title_tim{
@@ -103,6 +103,7 @@ a{
 
 .carts_tim{
     display: flex;
+    justify-content: center;
 }
 
 .cart_1_tim{

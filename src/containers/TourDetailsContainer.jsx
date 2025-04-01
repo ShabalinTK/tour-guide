@@ -1,17 +1,20 @@
-import '../styles/main.css'
-import '../styles/reset.css'
-import '../styles/styles.css'
-import '../styles/last.css'
-import '../styles/item.css'
-
 import React from "react";
-
-
+import DetailActivity from "../components/DetailActivity"
+import DetailIncludes from "../components/DetailIncludes"
+import DetailSafety from "../components/DetailSafety"
+import DetailDetsils from "../components/DetailDetsils"
+import DetailMeeting from "../components/DetailMeeting"
+import DetailMaps from "../components/DetailMaps"
 
 function TourDetailsContainer() {
     return (
-        <div class="tour-details">
-            
+        <div class="tour-details_rad">
+            <DetailActivity />
+            <DetailIncludes />
+            <DetailSafety />
+            <DetailDetsils />
+            <DetailMeeting />
+            <DetailMaps />
         </div>
     );
 }

@@ -1,21 +1,19 @@
-import '../styles/main.css'
-import '../styles/reset.css'
-import '../styles/styles.css'
-import '../styles/last.css'
-import '../styles/item.css'
+import '../styles/styles_rad.css'
 
 import React from "react";
 import WrapperImageContainer from "../containers/WrapperImageContainer"
 import TourDetailsContainer from "../containers/TourDetailsContainer"
 import DescriptionCard from "../components/DescriptionCard"
+import TimContainer from "../containers/TimContainer"
 
 
 function ContainerCard() {
     return (
-        <div class="container">
+        <div class="container_rad">
             <WrapperImageContainer/>
             <DescriptionCard/>
             <TourDetailsContainer/>
+            <TimContainer />
         </div>
     );
 }

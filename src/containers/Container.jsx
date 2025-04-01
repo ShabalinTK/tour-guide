@@ -7,9 +7,11 @@ import FiltersContainer from "./FiltersContainer";
 
 function Container({ sortOption }) {
     return (
-        <div className="container">
-            <FiltersContainer />
-            <PlacesContainer sortOption={sortOption} />
+        <div className="container_kol">
+            <div className="container">
+                <FiltersContainer />
+                <PlacesContainer sortOption={sortOption} />
+            </div>
         </div>
     );
 }

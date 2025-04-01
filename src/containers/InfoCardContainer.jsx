@@ -1,10 +1,10 @@
-import '../styles/item.css'
-
 import React from "react";
 import { AllPlaces } from "../containers/AllPlacesContainer.jsx";
 import { useParams } from 'react-router-dom';
 import ContainerCard from "../containers/ContainerCard.jsx"
 import TitleCard from '../components/TitleCard.jsx'
+import "../styles/styles_rad.css"
+import "../styles/reset1.css"
 
 
 function InfoCardContainer() {
@@ -19,7 +19,7 @@ function InfoCardContainer() {
     return (
         <main class="main">
             <div class="container_all_page">
-                <TitleCard city={city}/>
+                <TitleCard />
                 <ContainerCard/>
             </div>
         </main>

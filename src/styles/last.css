@@ -10,9 +10,6 @@ h3 {
     justify-content: center;
 }
 /* Header */
-.header {
-    /* color: #ffffff; */
-}
 
 .header_main_background_tim {
     background-image: url(./imggg/header_background_tim.png);
@@ -70,12 +67,11 @@ h3 {
 .form_tim {
     width: 1000px;
     height: 90px;
-    margin-top: 164px;
+    margin-top: 150px;
     background-color: #ffffff;
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     position: absolute; 
     top: 80%; 
     left: 50%; 
@@ -100,7 +96,6 @@ h3 {
     display: flex;
     text-align: center;
     flex-direction: column;
-    margin-top: 166px;
     align-items: center;
 }
 
@@ -118,6 +113,7 @@ h3 {
     font-size: 48px;
     color: #1C2B38;
     margin-bottom: 22px;
+    margin-top: 150px;
 }
 
 .main_we_Amet_text_tim {
@@ -154,7 +150,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     margin-bottom: 30px;
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
 .main_explore_text_tim {
