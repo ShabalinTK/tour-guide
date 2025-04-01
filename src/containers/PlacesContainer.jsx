@@ -1,24 +1,22 @@
 import React, { useMemo } from "react";
 import '../styles/index.css';
-import '../styles/reset1.css';
-import '../styles/variables.css';
-import Places from "./Places";
+import Places from '../containers/Places';
 
-function PlacesContainer({ sortOption }){
+function PlacesContainer({ sortOption, themeFilters = [], durationFilters = [], destinationFilters = [] }) {
     const places = [
         {
             id: 1,
             image: "../images/place.png",
-            type: "Water Activities",
+            type: "Food",
             title: "Westminster to Greenwich River Thames",
-            duration: "2 hours",
+            duration: "6 hours",
             cost: "$31.00",
             reviews: 584
         },
         {
             id: 2,
             image: "../images/place2.png",
-            type: "Water Activities",
+            type: "Food",
             title: "Westminster to Greenwich River Thames",
             duration: "2 hours",
             cost: "$45.00",
@@ -89,34 +87,66 @@ function PlacesContainer({ sortOption }){
         }
     ]
 
-    const sortedPlaces = useMemo(() => {
-        const placesCopy = [...places];
+    const sortedAndFilteredPlaces = useMemo(() => {
+        let filteredPlaces = [...places];
         
+        // Фильтрация по теме (type)
+        if (themeFilters.length > 0) {
+            filteredPlaces = filteredPlaces.filter(place => 
+                themeFilters.includes(place.type)
+            );
+        }
+        
+        // Фильтрация по продолжительности (duration)
+        if (durationFilters.length > 0) {
+            filteredPlaces = filteredPlaces.filter(place => {
+                const duration = place.duration;
+                return durationFilters.some(filter => {
+                    if (filter === "0-3 hours") return parseInt(duration) <= 3;
+                    if (filter === "3-5 hours") return parseInt(duration) > 3 && parseInt(duration) <= 5;
+                    if (filter === "5-7 hours") return parseInt(duration) > 5 && parseInt(duration) <= 7;
+                    if (filter === "Full day (7+ hours)") return parseInt(duration) > 7;
+                    if (filter === "Multi-day") return parseInt(duration) > 24; // предположение для multi-day
+                    return false;
+                });
+            });
+        }
+        
+        // Фильтрация по направлению (title)
+        if (destinationFilters.length > 0) {
+            filteredPlaces = filteredPlaces.filter(place => 
+                destinationFilters.some(destination => 
+                    place.title.includes(destination)
+                )
+            );
+        }
+
+        // Сортировка
         switch(sortOption) {
             case 'price-high':
-                return placesCopy.sort((a, b) => {
+                return filteredPlaces.sort((a, b) => {
                     const priceA = parseFloat(a.cost.replace('$', ''));
                     const priceB = parseFloat(b.cost.replace('$', ''));
                     return priceB - priceA;
                 });
             case 'price-low':
-                return placesCopy.sort((a, b) => {
+                return filteredPlaces.sort((a, b) => {
                     const priceA = parseFloat(a.cost.replace('$', ''));
                     const priceB = parseFloat(b.cost.replace('$', ''));
                     return priceA - priceB;
                 });
             case 'popularity':
             default:
-                return placesCopy.sort((a, b) => b.reviews - a.reviews);
+                return filteredPlaces.sort((a, b) => b.reviews - a.reviews);
         }
-    }, [sortOption, places]);
+    }, [sortOption, themeFilters, durationFilters, destinationFilters, places]);
 
     return(
         <div className="places__container">
-            <Places places={sortedPlaces}/>
+            <Places places={sortedAndFilteredPlaces}/>
             <button className="places__button">Load More</button>
         </div>
-    )
+    );
 }
 
 export default PlacesContainer;
