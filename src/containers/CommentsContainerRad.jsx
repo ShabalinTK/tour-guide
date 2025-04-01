@@ -60,15 +60,15 @@ function CommentsContainerRad() {
                 <div class="comment-text-container_rad">
                     <div class="comment-title-container_rad">
                         <h3 class="comment-title_rad">Informative but disappointed not seeing changing of the guards</h3>
-                        <div class="comment-title__right-part-con_rad">
-                            <p class="comment-title__right-part_rad">Helpful?</p>
-                            <a href="#" class="comment-title__right-part-link_rad">Yes</a>
-                        </div>
                     </div>
                     
                     <p class="com-main-text_rad">
                         The tour was very well organised. One minus is that you get completely bombarded with information. You also have to stand up for too long at the private entrance to the Tower of London, which leads to a lack of time later. Lunch was the same, too stress, the quality was great but you couldn't enjoy it. I'd like to ask the organisers: please
                     </p>
+                </div>
+                <div class="comment-title__right-part-con_rad">
+                    <p class="comment-title__right-part_rad">Helpful?</p>
+                    <a href="#" class="comment-title__right-part-link_rad">Yes</a>
                 </div>
             </div>
             <hr class="line_rad"/>
@@ -94,15 +94,15 @@ function CommentsContainerRad() {
                 <div class="comment-text-container_rad">
                     <div class="comment-title-container_rad">
                         <h3 class="comment-title_rad">I love their way of style</h3>
-                        <div class="comment-title__right-part-con_rad">
-                            <p class="comment-title__right-part_rad">Helpful?</p>
-                            <a href="#" class="comment-title__right-part-link_rad">Yes</a>
-                        </div>
                     </div>
                     
                     <p class="com-main-text_rad">
                         The tour was very well organised. One minus is that you get completely bombarded with information. You also have to stand up for too long at the private entrance to the Tower of London, which leads to a lack of time later. Lunch was the same, too stress, the quality was great but you couldn't enjoy it. I'd like to ask the organisers: please
                     </p>
+                </div>
+                <div class="comment-title__right-part-con_rad">
+                    <p class="comment-title__right-part_rad">Helpful?</p>
+                    <a href="#" class="comment-title__right-part-link_rad">Yes</a>
                 </div>
             </div>
             <hr class="line_rad"/>
@@ -128,15 +128,15 @@ function CommentsContainerRad() {
                 <div class="comment-text-container_rad">
                     <div class="comment-title-container_rad">
                         <h3 class="comment-title_rad">Enjoyed very much</h3>
-                        <div class="comment-title__right-part-con_rad">
-                            <p class="comment-title__right-part_rad">Helpful?</p>
-                            <a href="#" class="comment-title__right-part-link_rad">Yes</a>
-                        </div>
                     </div>
                     
                     <p class="com-main-text_rad">
                         The tour was very well organised. One minus is that you get completely bombarded with information. You also have to stand up for too long at the private entrance to the Tower of London, which leads to a lack of time later. Lunch was the same, too stress, the quality was great but you couldn't enjoy it. I'd like to ask the organisers: please
                     </p>
+                </div>
+                <div class="comment-title__right-part-con_rad">
+                    <p class="comment-title__right-part_rad">Helpful?</p>
+                    <a href="#" class="comment-title__right-part-link_rad">Yes</a>
                 </div>
             </div>
             <hr class="line_rad"/>
@@ -162,15 +162,15 @@ function CommentsContainerRad() {
                 <div class="comment-text-container_rad">
                     <div class="comment-title-container_rad">
                         <h3 class="comment-title_rad">Nice!!!!!!!</h3>
-                        <div class="comment-title__right-part-con_rad">
-                            <p class="comment-title__right-part_rad">Helpful?</p>
-                            <a href="#" class="comment-title__right-part-link_rad">Yes</a>
-                        </div>
                     </div>
                     
                     <p class="com-main-text_rad">
                         The tour was very well organised. One minus is that you get completely bombarded with information. You also have to stand up for too long at the private entrance to the Tower of London, which leads to a lack of time later. Lunch was the same, too stress, the quality was great but you couldn't enjoy it. I'd like to ask the organisers: please
                     </p>
+                </div>
+                <div class="comment-title__right-part-con_rad">
+                    <p class="comment-title__right-part_rad">Helpful?</p>
+                    <a href="#" class="comment-title__right-part-link_rad">Yes</a>
                 </div>
             </div>
             <hr class="line_rad"/>

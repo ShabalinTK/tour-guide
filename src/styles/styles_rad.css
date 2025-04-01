@@ -566,11 +566,11 @@ hr.line_rad {
 
 .filter-section_rad {
     display: flex;
-    width: 1035px;
     height: 80px;
     margin-top: 50px;
     background-color: #F8FAFC;
     border-radius: 10px;
+    justify-content: space-around;
 }
 
 .filter-option{
@@ -628,7 +628,6 @@ hr.line_rad {
 
 .comments-container_rad {
     margin-top: 29px;
-    width: 1035px;
 }
 
 .comment-container_rad {
@@ -684,9 +683,8 @@ hr.line_rad {
 }
 
 .comment-text-container_rad {
-    margin: 0;
+    margin: 0 auto;
     margin-left: 57px;
-    width: 770px;
 }
 
 .comment-title_rad{
