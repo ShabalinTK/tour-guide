@@ -1,18 +1,18 @@
-import '../styles/styles_rad.css'
+import '../styles/styles_rad.css';
+import React from "react";
 
-function DetailSafety(){
+function DetailSafety({ safety }){
     return (
-        <dev class="safety">
+        <div className="safety">
             <h2>Safety</h2>
             <h3>Health Precautions</h3>
-            <ul class="list_rad">
-                <li>All required protective equipment is provided</li>
-                <li>All areas that customers touch are frequently cleaned</li>
-                <li>You must keep social distance while in vehicles</li>
-                <li>The number of visitors is limited to reduce crowds</li>
+            <ul className="list_rad">
+                {safety?.map((item, index) => (
+                    <li key={index}>{item}</li>
+                ))}
             </ul>
-            <hr class="line_rad"/>
-        </dev>
+            <hr className="line_rad"/>
+        </div>
     );
 }
 

@@ -1,15 +1,14 @@
-import '../styles/styles_rad.css'
+import '../styles/styles_rad.css';
+import React from "react";
 
-function DetailMeeting(){
+function DetailMeeting({ address }){
     return (
-        <dev class="meeting_rad">
+        <div className="meeting_rad">
             <h3>Meeting Point Address</h3>
             <p id="meeting-text">
-                ● Meet your guide inside the west entrance of Altab Ali Park (Whitechapel Road). 
-                It’s opposite the entrance to Aldgate East Tube Station and the Whitechapel Gallery. 
-                Look for a guide wearing SMT attire and holding a red SMT flag.
+                ● {address || "Meeting point address will be provided after booking"}
             </p>
-        </dev>
+        </div>
     );
 }
 

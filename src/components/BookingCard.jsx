@@ -1,46 +1,47 @@
 import "../styles/styles_rad.css"
+import React from "react";
 
-function BookingCard(){
+function BookingCard({ price }){
     return (
-        <div class="booking-section_rad">
-            <h2 class="booking-header_rad">Booking</h2>
-            <hr class="booking-line_rad"/>
+        <div className="booking-section_rad">
+            <h2 className="booking-header_rad">Booking</h2>
+            <hr className="booking-line_rad"/>
 
-            <div class="date-picker-container_rad">
-                <label for="date-input_rad" class="date-label_rad">From</label>
-                <div class="date-input-wrapper_rad">
-                    <input type="text" id="date-input_rad" class="date-input_rad" value="10/12/2021" readonly/>
-                    <img src="../icons_rad/bx_bx-calendar.svg" alt="icon" class="calendar-icon_rad"/>
+            <div className="date-picker-container_rad">
+                <label htmlFor="date-input_rad" className="date-label_rad">From</label>
+                <div className="date-input-wrapper_rad">
+                    <input type="text" id="date-input_rad" className="date-input_rad" defaultValue="10/12/2021" readOnly/>
+                    <img src="../icons_rad/bx_bx-calendar.svg" alt="icon" className="calendar-icon_rad"/>
                 </div>
             </div>
 
-            <div class="date-picker-container_rad">
-                <label for="date-input_rad" class="date-label_rad">To</label>
-                <div class="date-input-wrapper_rad">
-                    <input type="text" id="date-input_rad" class="date-input_rad" value="10/12/2021" readonly/>
-                    <img src="../icons_rad/bx_bx-calendar.svg" alt="icon" class="calendar-icon_rad"/>
+            <div className="date-picker-container_rad">
+                <label htmlFor="date-input_rad" className="date-label_rad">To</label>
+                <div className="date-input-wrapper_rad">
+                    <input type="text" id="date-input_rad" className="date-input_rad" defaultValue="10/12/2021" readOnly/>
+                    <img src="../icons_rad/bx_bx-calendar.svg" alt="icon" className="calendar-icon_rad"/>
                 </div>
             </div>
 
-            <div class="date-picker-container_rad">
-                <label for="date-input_rad" class="date-label_rad">No. of guest</label>
-                <div class="date-input-wrapper_rad">
-                    <input type="text" id="date-input_rad" class="date-input_rad" value="2 adults" readonly/>
-                    <img src="../icons_rad/ant-design_caret-down-outlined.svg" alt="icon" class="calendar-icon_rad"/>
+            <div className="date-picker-container_rad">
+                <label htmlFor="date-input_rad" className="date-label_rad">No. of guest</label>
+                <div className="date-input-wrapper_rad">
+                    <input type="text" id="date-input_rad" className="date-input_rad" defaultValue="2 adults" readOnly/>
+                    <img src="../icons_rad/ant-design_caret-down-outlined.svg" alt="icon" className="calendar-icon_rad"/>
                 </div>
             </div>
 
-            <p class="subtotal_rad">Subtotal</p>
-            <p class="price_rad">$78.90</p>
+            <p className="subtotal_rad">Subtotal</p>
+            <p className="price_rad">${price?.toFixed(2)}</p>
 
-            <button class="confirm-booking-btn_rad confirm-green">Confirm Booking</button>
+            <button className="confirm-booking-btn_rad confirm-green">Confirm Booking</button>
 
-            <button class="wishlist-btn_rad">
+            <button className="wishlist-btn_rad">
                 <img src="../icons_rad/like.svg" alt="icon"/>
                 Save To Wishlist
             </button>
             
-            <button class="wishlist-btn_rad">
+            <button className="wishlist-btn_rad">
                 <img src="../icons_rad/share.svg" alt="icon"/>
                 Share the activity
             </button>

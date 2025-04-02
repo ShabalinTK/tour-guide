@@ -307,6 +307,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .places__item--right {
   display: flex;
   flex-direction: column;
+  width: 100px;
 }
 
 .places__cost {

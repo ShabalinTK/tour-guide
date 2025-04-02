@@ -1,18 +1,17 @@
 import "../styles/styles_rad.css"
 
-function ImagesCard(){
+function ImagesCard({ mainImage }){
     return (
         <div class="image-confirmation-section_rad">
             <div class="image-container_rad">
-                <img src="../images_rad/Rectangle 129.png" alt="img" id="main-img"/>
+                <img src={mainImage} alt="Tour" id="main-img"/>
 
-                <div class="small-images-container_rad">
-                    <img src="../images_rad/Rectangle 158.png" alt="img" class="small-image_rad"/>
-                    <img src="../images_rad/Rectangle 159.png" alt="img" class="small-image_rad"/>
-                    <img src="../images_rad/Rectangle 160.png" alt="img" class="small-image_rad"/>
-                    <img src="../images_rad/Rectangle 161.png" alt="img" class="small-image_rad"/>
-                    <img src="../images_rad/Rectangle 162.png" alt="img" class="small-image_rad"/>
-                    <img src="../images_rad/Rectangle 163.png" alt="img" class="small-image_rad"/>
+                <div className="small-images-container_rad">
+                    <img src={mainImage} alt="Tour thumbnail" className="small-image_rad"/>
+                    <img src={mainImage} alt="Tour thumbnail" className="small-image_rad"/>
+                    <img src={mainImage} alt="Tour thumbnail" className="small-image_rad"/>
+                    <img src={mainImage} alt="Tour thumbnail" className="small-image_rad"/>
+                    <img src={mainImage} alt="Tour thumbnail" className="small-image_rad"/>
                 </div>
 
                 <div class="definition_rad">
